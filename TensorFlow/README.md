@@ -5,6 +5,8 @@ This Dockerfile adds some tools to the [vanilla TensorFlow GPU image](https://gi
  - tmux
  - Matplotlib
  - Mayavi
+ - Pandas
+ - Seaborn
 
 To build the docker image, run:
 ```shell

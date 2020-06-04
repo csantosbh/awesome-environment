@@ -94,7 +94,12 @@ RUN apt install -y --no-install-recommends \
     libegl1-mesa-dev \
     libgtk-3-dev
 
-RUN python3 -m pip --no-cache-dir install matplotlib wxpython mayavi
+RUN python3 -m pip --no-cache-dir install \
+    matplotlib \
+    wxpython \
+    mayavi \
+    pandas \
+    seaborn
 
 COPY bashrc /etc/bash.bashrc
 RUN chmod a+rwx /etc/bash.bashrc
