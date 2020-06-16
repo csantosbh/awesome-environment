@@ -2,6 +2,7 @@
 
 This Dockerfile adds some tools to the [vanilla TensorFlow GPU image](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/tools/dockerfiles), namely:
 
+ - TensorFlow Graphics
  - tmux
  - Matplotlib
  - Mayavi

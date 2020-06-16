@@ -84,7 +84,7 @@ ARG TF_PACKAGE_VERSION=
 RUN python3 -m pip install --no-cache-dir ${TF_PACKAGE}${TF_PACKAGE_VERSION:+==${TF_PACKAGE_VERSION}}
 
 # Install useful packages for this environment
-RUN apt install -y --no-install-recommends \
+RUN apt update && apt install -y --no-install-recommends \
     language-pack-en \
     tmux \
     python3-tk \
@@ -92,14 +92,17 @@ RUN apt install -y --no-install-recommends \
     libx11-dev \
     mesa-common-dev \
     libegl1-mesa-dev \
-    libgtk-3-dev
+    libgtk-3-dev \
+    openexr \
+    libopenexr-dev
 
 RUN python3 -m pip --no-cache-dir install \
     matplotlib \
     wxpython \
     mayavi \
     pandas \
-    seaborn
+    seaborn \
+    tensorflow_graphics
 
 COPY bashrc /etc/bash.bashrc
 RUN chmod a+rwx /etc/bash.bashrc
