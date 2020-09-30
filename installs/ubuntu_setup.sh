@@ -35,3 +35,9 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 
 # Install vim plugins
 git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle/vim-easymotion
+
+# Configure git
+git config --global core.editor "vim"
+git config --global diff.tool vimdiff
+git config --global merge.tool vimdiff
+
