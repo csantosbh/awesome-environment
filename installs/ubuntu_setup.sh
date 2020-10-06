@@ -3,6 +3,7 @@
 sudo apt update
 sudo apt install -y \
     build-essential \
+    tmux \
     zsh \
     silversearcher-ag \
     htop \
