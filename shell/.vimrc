@@ -8,6 +8,7 @@ set smartcase
 set number
 set autoindent
 set smartindent
+set list
 map k gk
 map j gj
 

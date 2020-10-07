@@ -5,6 +5,7 @@ sudo apt install -y \
     build-essential \
     tmux \
     zsh \
+    gifsicle \
     silversearcher-ag \
     htop \
     command-not-found \
