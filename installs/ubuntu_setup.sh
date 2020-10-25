@@ -34,7 +34,7 @@ if [ -d ~/anaconda3/ ]; then
 fi
 
 # Copy configuration files to proper folders
-cp ../shell/.ideavimrc ../shell/.vimrc ~/
+cp ../shell/.ideavimrc ../shell/.vimrc ../shell/.tmux.conf ~/
 cp ../shell/zsh_extensions.zsh ~/.oh-my-zsh/custom
 
 # Install pathogen (vim package manager)
