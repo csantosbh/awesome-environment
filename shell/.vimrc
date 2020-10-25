@@ -15,4 +15,4 @@ map j gj
 execute pathogen#infect()
 
 " Use space as the easymotion prefix key
-map <Space> <Plug>(easymotion-prefix)
+exe "map <Space> <Plug>(easymotion-prefix)"
