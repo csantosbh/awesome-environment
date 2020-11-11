@@ -12,6 +12,11 @@ set list
 map k gk
 map j gj
 
+" Match enclosing square brackets
+nnoremap ]b :call searchpair('\[','','\]')<cr>
+nnoremap [b :call searchpair('\[','','\]','b')<cr>
+
+
 execute pathogen#infect()
 
 " Use space as the easymotion prefix key
