@@ -15,6 +15,7 @@ sudo apt install -y \
     mlocate \
     xclip \
     libeigen3-dev \
+    graphviz \
     libglm-dev \
     liboctave-dev
 
@@ -54,6 +55,9 @@ fi
 git config --global core.editor "vim"
 git config --global diff.tool vimdiff
 git config --global merge.tool vimdiff
+
+# Python libs
+pip install pydot
 
 # Done!
 echo "Done! Enjoy your new environment."
