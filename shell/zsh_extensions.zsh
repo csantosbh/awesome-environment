@@ -11,7 +11,7 @@ alias g='git'
 
 # Improve ls
 alias ls='ls -a --color=auto'
-alias ag='ag -i'
+alias ag='ag -i --pager less'
 
 # Usage: `fnd <name-portion>` will look for files that contain <name-portion> (case insesitive)
 function fnd() {

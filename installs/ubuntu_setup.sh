@@ -23,19 +23,19 @@ sudo apt install -y \
 export RUNZSH=no
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# Install anaconda
-if [ ! -d ~/anaconda3/ ]; then
-    ANACONDA_SH=Anaconda3-2020.07-Linux-x86_64.sh
-    if [ ! -f ${ANACONDA_SH} ]; then
-        wget https://repo.anaconda.com/archive/${ANACONDA_SH}
+# Install conda
+if [ ! -d ~/miniconda3/ ]; then
+    CONDA_SH=Miniconda3-latest-Linux-x86_64.sh
+    if [ ! -f ${CONDA_SH} ]; then
+        wget https://repo.anaconda.com/miniconda/${CONDA_SH}
     fi
-    bash ./${ANACONDA_SH}
-    rm ${ANACONDA_SH}
-    if [ -d ~/anaconda3/ ]; then
-        ~/anaconda3/bin/conda init zsh
+    bash ./${CONDA_SH}
+    rm ${CONDA_SH}
+    if [ -d ~/miniconda3/ ]; then
+        ~/miniconda3/bin/conda init zsh
     fi
 else
-    echo "Anaconda already installed; skipping installation..."
+    echo "Conda already installed; skipping installation..."
 fi
 
 # Copy configuration files to proper folders
