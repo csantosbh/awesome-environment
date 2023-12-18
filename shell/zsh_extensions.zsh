@@ -31,3 +31,14 @@ function vid2gif() {
     rm $palette_name
     gifsicle -O3 --lossy=80 --colors=192 $outname -o $outname
 }
+
+function compress() {
+    if [ ! -e "$1" ]; then
+        echo "How to run: $0 <path_to_file_to_compress>.\nWill produce a compressed file <same_file_basename>.tar.gz."
+        return
+    fi
+    parent_folder=$(dirname "$1")
+    basename=$(basename "$1" | cut -d. -f1)
+
+    tar -cvzf ${parent_folder}/${basename}.tar.gz $1
+}
